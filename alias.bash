@@ -13,15 +13,18 @@ gitcommit () {
     eval $cmd;
 }
 
+gitinteractiverebase () {
+    cmd="git rebase -i HEAD~$@";
+    eval $cmd;
+}
 
 gitaddcommit () {
     cmd="git commit -a -m \"$@\"";
     eval $cmd;
 }
 
-alias gitstatus='git status -s'
-alias gitdiff='git diff'
-alias gituncommit="git reset --soft 'HEAD^'"
+alias gitstatus='git status -s '
+alias gitdiff='git diff '
+alias gituncommit="git reset --soft 'HEAD^' "
 alias gitfileunaddrecursive="git reset HEAD "
-alias gitredo='git commit -c ORIG_HEAD'
-
+alias gitredo='git commit -c ORIG_HEAD '
